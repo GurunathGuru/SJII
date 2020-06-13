@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "542439898095",
+    "firebase_url": "https://sjii-b0fbf.firebaseio.com",
+    "project_id": "sjii-b0fbf",
+    "storage_bucket": "sjii-b0fbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542439898095:android:ce8673af86c79dd6afd41a",
+        "android_client_info": {
+          "package_name": "com.integro.sjii"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542439898095-8v7fmsb1md7kcltd56b3m28qnt5vedml.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.integro.sjii",
+            "certificate_hash": "2a3e43275833ba290d29bf05e9a87d85d86806da"
+          }
+        },
+        {
+          "client_id": "542439898095-tiksjoah9vbjanun9glcpbgi8bdi7bhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFcOjxKitvFMoCdHd3yCoUGxW5lf5xWDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542439898095-tiksjoah9vbjanun9glcpbgi8bdi7bhd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
