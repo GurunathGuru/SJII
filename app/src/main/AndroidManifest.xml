@@ -15,7 +15,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="UnusedAttribute">
-        <activity android:name=".SjiiPTAActivity"></activity>
+        <activity android:name=".SupportUsActivity"></activity>
+        <activity android:name=".AlumniActivity" />
+        <activity android:name=".ManagementActivity" />
+        <activity android:name=".SjiiPTAActivity" />
         <activity android:name=".NewsLetterActivity" />
         <activity android:name=".FacilitiesDetailsActivity" />
         <activity android:name=".FacilitiesActivity" />

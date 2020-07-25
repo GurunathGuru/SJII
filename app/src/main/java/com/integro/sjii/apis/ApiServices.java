@@ -1,11 +1,13 @@
 package com.integro.sjii.apis;
 
+import com.integro.sjii.models.AlumniList;
 import com.integro.sjii.models.AnnouncementList;
 import com.integro.sjii.models.FacilitiesList;
 import com.integro.sjii.models.FacilityImagesList;
 import com.integro.sjii.models.FacultyList;
 import com.integro.sjii.models.Institution;
 import com.integro.sjii.models.InstitutionList;
+import com.integro.sjii.models.ManagementList;
 import com.integro.sjii.models.NewsImagesList;
 import com.integro.sjii.models.NewsLetter;
 import com.integro.sjii.models.NewsLetterList;
@@ -50,6 +52,12 @@ public interface ApiServices {
 
         @POST("/sjii_app/sjii_facilities.php")
         Call<FacilitiesList> getFacilitiesList();
+
+        @POST("/sjii_app/sjii_alumni.php")
+        Call<AlumniList> getAlumniList();
+
+        @POST("sjii_app/sjii_management.php")
+        Call<ManagementList> getManagementList();
 
         @FormUrlEncoded
         @POST("/sjii_app/sjii_facilitiesimg.php")

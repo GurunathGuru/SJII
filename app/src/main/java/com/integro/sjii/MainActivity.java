@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -90,11 +92,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    public void getPatronMessage(View view) {
-        intent1.putExtra("tag", "Patron");
-        startActivity(intent1);
-    }
-
     public void getRectorMessage(View view) {
         intent1.putExtra("tag", "Rector");
         startActivity(intent1);
@@ -135,17 +132,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void getAlumni(View view) {
-        intent.putExtra("tag", "ALUMNI");
+        Intent intent = new Intent(getApplicationContext(), AlumniActivity.class);
         startActivity(intent);
     }
 
     public void getPTA(View view) {
         Intent intent = new Intent(getApplicationContext(), SjiiPTAActivity.class);
-        startActivity(intent);
-    }
-
-    public void getNotification(View view) {
-        intent.putExtra("tag", "NOTIFICATIONS");
         startActivity(intent);
     }
 
@@ -164,12 +156,36 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startActivity(intent);
     }
 
-    public void photos(View view) {
+    public void management(View view) {
+        Intent intent = new Intent(getApplicationContext(), ManagementActivity.class);
+        startActivity(intent);
+    }
+
+    public void videos(View view) {
         Toast.makeText(getApplicationContext(), "coming soon", Toast.LENGTH_SHORT).show();
     }
 
-    public void enquiry(View view) {
-        Toast.makeText(getApplicationContext(), "coming soon", Toast.LENGTH_SHORT).show();
+
+    public void sendEmail(View view) {
+        Intent testIntent = new Intent(Intent.ACTION_VIEW);
+        Uri data = Uri.parse("mailto:?subject=" + " " + "&body=" + " " + "&to=" + "info@sjcc.edu.in");
+        testIntent.setData(data);
+        startActivity(testIntent);
+    }
+
+    public void getLogin(View view) {
+        String url = "https://sjii.pupilpod.in/";
+        Intent intent = new Intent(getApplicationContext(), WebActivity.class);
+        intent.putExtra("TAG", url);
+        startActivity(intent);
+    }
+
+    public void getE_Learning(View view) {
+        String url = "https://sjihsbangalore.com/login.php";
+        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+        builder.setToolbarColor(getResources().getColor(R.color.colorBlue));
+        CustomTabsIntent customTabsIntent = builder.build();
+        customTabsIntent.launchUrl(this, Uri.parse(url));
     }
 
     public void address(View view) {
@@ -178,8 +194,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         AlertDialog.Builder builder = alertDialogBuilder.setMessage("St. Joseph’s Indian High School\n 23, Vittal Mallya Road,\nBangalore – 560 001").setCancelable(false)
                 .setPositiveButton("Go to Map", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        String url ="https://www.google.com/maps/dir//12.96888,77.5948954/@12.96888,77.594895,9z?hl=en-US";
-                        Intent intent=new Intent(Intent.ACTION_VIEW);
+                        String url = "https://www.google.com/maps/dir//12.96888,77.5948954/@12.96888,77.594895,9z?hl=en-US";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
                     }
@@ -192,9 +208,38 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         alertDialog.show();
     }
 
-    public void videos(View view) {
-        Toast.makeText(getApplicationContext(), "coming soon", Toast.LENGTH_SHORT).show();
+    public void getDial(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+        final CharSequence[] phone = new CharSequence[]{"+91080 2229 2622", "+91 080 2222 9052","+91 080 4097 7838", "+91 080 4101 0013"};
+        final CharSequence[] optionsChosen = phone;
+        builder.setItems(optionsChosen, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+                if (optionsChosen[item].equals("+91 080 2229 2622")) {
+                    String phone = "+91 080 2229 2622";
+                    Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+                    startActivity(callIntent);
+
+                } else if (optionsChosen[item].equals("+91 080 2222 9052  ")) {
+                    String phone = "+91 080 2222 9052  ";
+                    Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+                    startActivity(callIntent);
+
+                } else if (optionsChosen[item].equals("+91 080 4097 7838")) {
+                    String phone = "+91 080 4097 7838";
+                    Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+                    startActivity(callIntent);
+
+                } else if (optionsChosen[item].equals("+91 080 4101 0013")) {
+                    String phone = "+91 080 4101 0013";
+                    Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+                    startActivity(callIntent);
+                }
+            }
+        });
+        builder.show();
     }
+
 
     @Override
     public void onBackPressed() {
@@ -213,5 +258,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
-
 }

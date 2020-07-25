@@ -2,418 +2,435 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFF"
-    android:orientation="vertical"
-    android:weightSum="4.5"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
         <LinearLayout
-            android:id="@+id/llLogo"
-            android:layout_width="0sp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="#E4E2E2"
-            android:gravity="center"
+            android:background="#FFF"
             android:orientation="vertical"
-            tools:ignore="OnClick">
+            android:weightSum="4.5">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
                 android:layout_weight="1"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="aboutUs"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/logo2" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0sp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0sp"
-                android:layout_weight="1"
-                android:background="@color/colorBlue5"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="visionAndMission"
                 android:orientation="horizontal"
                 android:weightSum="2">
-
-                <ImageView
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#A5ADB8"
-                    android:src="@drawable/about_us" />
-
-                <TextView
-                    android:id="@+id/tvStaff"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5"
-                    android:fontFamily="@font/amiri_regular"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="SJII"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0sp"
-                android:layout_weight="1"
-                android:background="@color/colorBlue"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="getEvents"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#58FFFFFF"
-                    android:padding="10sp"
-                    android:src="@drawable/calendar" />
-
-                <TextView
-                    android:id="@+id/tvStudents"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5"
-                    android:fontFamily="@font/amiri_regular"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="EVENTS"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp"
-                    tools:ignore="KeyboardInaccessibleWidget,OnClick" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <LinearLayout
-            android:layout_width="0sp"
-            android:layout_height="match_parent"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="@color/colorBlue2"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:weightSum="2">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0sp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="getNewsLetter"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <TextView
-                    android:id="@+id/tvNewsLetter"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5"
-                    android:fontFamily="@font/amiri_regular"
-                    android:gravity="center|end"
-                    android:paddingRight="5dp"
-                    android:text="NEWS LETTER"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#578DA2"
-                    android:padding="10dp"
-                    android:src="@drawable/newsletter" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0sp"
-                android:layout_weight="1"
-                android:background="#378dbe"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="getInstitutions"
-                android:orientation="horizontal"
-                android:weightSum="2"
-                tools:ignore="OnClick">
-
-                <TextView
-                    android:id="@+id/tvCalendar"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5"
-                    android:fontFamily="@font/amiri_regular"
-                    android:gravity="center|end"
-                    android:paddingRight="5dp"
-                    android:text="OUR INSTITUTIONS"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#1A6897"
-                    android:padding="5dp"
-                    android:src="@drawable/institutions" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0sp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0sp"
-                android:layout_weight="1"
-                android:background="@color/colorBlue3"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="getFacilities"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#585F5F5F"
-                    android:padding="3dp"
-                    android:src="@drawable/facilities" />
-
-                <TextView
-                    android:id="@+id/tvParents"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5"
-                    android:fontFamily="@font/amiri_regular"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="FACILITIES"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0sp"
-                android:layout_weight="1"
-                android:background="@color/colorBlue1"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="getAlumni"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#354D64"
-                    android:padding="7dp"
-                    android:src="@drawable/alumni" />
-
-                <TextView
-                    android:id="@+id/tvAlumni"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5"
-                    android:fontFamily="@font/amiri_regular"
-                    android:gravity="center|start"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:text="ALUMNI"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/vpGallery"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="1dp"
-        android:layout_weight="1.5"
-        android:scaleType="centerCrop"
-        android:src="@drawable/slides" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <LinearLayout
-            android:layout_width="0sp"
-            android:layout_height="match_parent"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/llVisitors"
-                android:layout_width="match_parent"
-                android:layout_height="0sp"
-                android:layout_weight="1"
-                android:background="@color/colorBlue6"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="getPTA"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:padding="5dp"
-                    android:src="@drawable/authorities" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/amiri_regular"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="#E4E2E2"
                     android:gravity="center"
-                    android:text="PTA "
-                    android:textColor="@color/colorWhite"
-                    android:textSize="15dp" />
+                    android:orientation="vertical"
+                    tools:ignore="OnClick">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="aboutUs"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/logo2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_weight="1"
+                        android:background="@color/colorBlue5"
+                        android:gravity="center"
+                        android:onClick="visionAndMission"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="#A5ADB8"
+                            android:src="@drawable/about_us" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/amiri_regular"
+                            android:gravity="center|left"
+                            android:paddingLeft="5dp"
+                            android:onClick="getE_Learning"
+                            android:text="E-LEARNING"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_weight="1"
+                        android:background="@color/colorBlue"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="getEvents"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="#58FFFFFF"
+                            android:padding="10sp"
+                            android:src="@drawable/calendar" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/amiri_regular"
+                            android:gravity="center|left"
+                            android:paddingLeft="5dp"
+                            android:text="EVENTS"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15dp"
+                            tools:ignore="KeyboardInaccessibleWidget,OnClick" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0sp"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="#beb9b5"
-                android:gravity="center"
                 android:orientation="horizontal"
-                android:weightSum="3">
+                android:weightSum="2">
 
-                <ImageView
-                    android:id="@+id/ivEnquiry"
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlue2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="getNewsLetter"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/amiri_regular"
+                            android:gravity="center|end"
+                            android:paddingRight="5dp"
+                            android:text="NEWS LETTER"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="#578DA2"
+                            android:padding="10dp"
+                            android:src="@drawable/newsletter" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_weight="1"
+                        android:background="#378dbe"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="getInstitutions"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        tools:ignore="OnClick">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/amiri_regular"
+                            android:gravity="center|end"
+                            android:paddingRight="5dp"
+                            android:text="OUR INSTITUTIONS"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="#1A6897"
+                            android:padding="5dp"
+                            android:src="@drawable/institutions" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="videos"
-                    android:clickable="true"
-                    android:padding="5dp"
-                    android:src="@drawable/enquiry" />
+                    android:orientation="vertical">
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="#FFF" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_weight="1"
+                        android:background="@color/colorBlue3"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="getFacilities"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
 
-                <ImageView
-                    android:id="@+id/ivEmail"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:onClick="videos"
-                    android:padding="5dp"
-                    android:src="@drawable/email" />
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="#585F5F5F"
+                            android:padding="3dp"
+                            android:src="@drawable/facilities" />
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="#FFF" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/amiri_regular"
+                            android:gravity="center|left"
+                            android:paddingLeft="5dp"
+                            android:text="FACILITIES"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15dp" />
+                    </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/ivCall"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:padding="5dp"
-                    android:src="@drawable/call"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_weight="1"
+                        android:background="@color/colorBlue1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="getAlumni"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="#354D64"
+                            android:padding="7dp"
+                            android:src="@drawable/alumni" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/amiri_regular"
+                            android:gravity="center|start"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="ALUMNI"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0sp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#8e9ead"
-            android:gravity="center"
-            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1.5"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slides" />
 
             <LinearLayout
-                android:id="@+id/llAnnouncement"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
                 android:layout_weight="1"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="getAnnouncements"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_announcements2" />
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
 
-                <TextView
-                    android:id="@+id/tvAnnouncements"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/amiri_regular"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_marginBottom="1sp"
+                        android:layout_weight="1"
+                        android:background="@color/colorBlue6"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:clickable="true"
+                            android:fontFamily="@font/amiri_regular"
+                            android:gravity="center|end"
+                            android:onClick="getPTA"
+                            android:text="PTA "
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="#91A9B8"
+                            android:padding="5dp"
+                            android:src="@drawable/authorities" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_weight="1"
+                        android:background="#beb9b5"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="getPTA"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:clickable="true"
+                            android:fontFamily="@font/amiri_regular"
+                            android:gravity="center|end"
+                            android:onClick="getAnnouncements"
+                            android:text="TIME TABLE "
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="#BCADA1"
+                            android:padding="5dp"
+                            android:src="@drawable/timetable2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:text="ANNOUNCEMENTS"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp" />
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0sp"
+                            android:layout_weight="1"
+                            android:background="#8e9ead"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:background="#A2AEBA"
+                                android:src="@drawable/ic_announcements2" />
+
+                            <TextView
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.5"
+                                android:clickable="true"
+                                android:fontFamily="@font/amiri_regular"
+                                android:gravity="center|start"
+                                android:onClick="getAnnouncements"
+                                android:paddingLeft="10sp"
+                                android:text="ANNOUNCEMENTS"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0sp"
+                            android:layout_marginTop="1sp"
+                            android:layout_weight="1"
+                            android:background="#00BCD4"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:background="#A9CBCF"
+                                android:padding="5sp"
+                                android:src="@drawable/login1" />
+
+                            <TextView
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.5"
+                                android:clickable="true"
+                                android:fontFamily="@font/amiri_regular"
+                                android:gravity="center|start"
+                                android:onClick="getLogin"
+                                android:paddingLeft="10sp"
+                                android:text="LOGIN"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 </LinearLayout>

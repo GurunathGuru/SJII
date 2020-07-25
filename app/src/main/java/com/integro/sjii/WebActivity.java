@@ -14,8 +14,10 @@ import android.webkit.WebViewClient;
 
 import com.victor.loading.newton.NewtonCradleLoading;
 
+import im.delight.android.webview.AdvancedWebView;
+
 public class WebActivity extends AppCompatActivity {
-    WebView webView;
+    private AdvancedWebView webView;
     NewtonCradleLoading newtonCradleLoading;
 
     @Override

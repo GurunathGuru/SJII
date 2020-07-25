@@ -22,6 +22,55 @@
                 android:fontFamily="@font/playfairdisplay_regular"
                 android:gravity="center|start"
                 android:padding="5sp"
+                android:text="VISION"
+                android:textColor="@color/colorBlue"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amiri_regular"
+                android:padding="5sp"
+                android:text="@string/vision" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfairdisplay_regular"
+                android:gravity="center|start"
+                android:padding="5sp"
+                android:text="MISSION"
+                android:textColor="@color/colorBlue"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amiri_regular"
+                android:padding="5sp"
+                android:text="@string/mission" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfairdisplay_regular"
+                android:gravity="center|start"
+                android:padding="5sp"
+                android:text="Core Values"
+                android:textColor="@color/colorBlue"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amiri_regular"
+                android:padding="5sp"
+                android:text="@string/coreValues" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfairdisplay_regular"
+                android:gravity="center|start"
+                android:padding="5sp"
                 android:text="HISTORY"
                 android:textColor="@color/colorBlue"/>
 

@@ -1,7 +1,10 @@
 package com.integro.sjii;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,6 +28,7 @@ public class FacultyActivity extends AppCompatActivity {
     private RecyclerView rvFaculty;
     private ArrayList<Faculty> facultyArrayList;
     private FacultyAdapter adapter;
+    private TextView faculty1,faculty2,faculty3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,41 @@ public class FacultyActivity extends AppCompatActivity {
         rvFaculty = findViewById(R.id.rvFaculty);
         facultyArrayList = new ArrayList<>();
         rvFaculty.setLayoutManager(new LinearLayoutManager(this));
+
+        faculty1=findViewById(R.id.faculty1);
+        faculty2=findViewById(R.id.faculty2);
+        faculty3=findViewById(R.id.faculty3);
+
+        faculty1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url ="http://sjiibangalore.com/sjmiddle/faculty.html";
+                Intent intent=new Intent(getApplicationContext(),WebActivity.class);
+                intent.putExtra("TAG",url);
+                startActivity(intent);
+            }
+        });
+
+        faculty2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url ="http://sjiibangalore.com/sjhigh/faculty.html";
+                Intent intent=new Intent(getApplicationContext(),WebActivity.class);
+                intent.putExtra("TAG",url);
+                startActivity(intent);
+            }
+        });
+
+
+        faculty3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url ="http://sjicpuc.org/teaching_staff.html";
+                Intent intent=new Intent(getApplicationContext(),WebActivity.class);
+                intent.putExtra("TAG",url);
+                startActivity(intent);
+            }
+        });
 
         getFacultyList();
     }

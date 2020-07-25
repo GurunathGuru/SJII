@@ -42,7 +42,7 @@ public class SjiiPTAAdapter extends RecyclerView.Adapter<SjiiPTAAdapter.MyViewHo
 
         holder.tvTitle.setText(sjiiPTA.getName());
         holder.tvDescription.setText(sjiiPTA.getDesignation());
-        holder.tvPosition.setText(sjiiPTA.getDesignation());
+        holder.tvPosition.setText(sjiiPTA.getPosition());
     }
 
     @Override
