@@ -42,9 +42,10 @@ public class AlumniActivity extends AppCompatActivity {
         alumniRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url ="http://sjiialumni.com/registration.php";
-                Intent intent=new Intent(getApplicationContext(),WebActivity.class);
-                intent.putExtra("TAG",url);
+                //String url ="http://sjiialumni.com/registration.php";
+                String url = "http://www.sjihsalumni.com/index.php";
+                Intent intent = new Intent(getApplicationContext(), WebActivity.class);
+                intent.putExtra("TAG", url);
                 startActivity(intent);
             }
         });
